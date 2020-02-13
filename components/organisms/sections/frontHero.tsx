@@ -8,6 +8,7 @@ import Avatar from '~components/atoms/images/avatar'
 import TextRotator from '~components/atoms/text/rotator'
 import Pattern from '~components/molecules/media/pattern'
 import CircleLines from '~components/molecules/media/circleLines'
+import SocialIcons from '~components/organisms/lists/socialIcons'
 
 const FrontHero = () => {
   const classes = useStyles()
@@ -43,7 +44,7 @@ const FrontHero = () => {
       <Container>
         <Grid spacing={4} container>
           <Grid xs={12} md={6} lg={4} item>
-            <Box py={4} mt={6}>
+            <Box py={8} mt={6}>
 
               <Typography variant="h1" className={classes.greeting}>
                 <TextRotator strings={greetings} />!
@@ -61,7 +62,14 @@ const FrontHero = () => {
               </Typography>
 
               <Box py={4}>
-                <Avatar src={githubData.value?.avatar_url} />
+                <Box className={classes.quote} display="flex" mb={2} alignItems="center">
+                  <Avatar src={githubData.value?.avatar_url} />
+                  <Typography variant="body2">
+                    <em>Easy code, easy life ~</em>
+                  </Typography>
+                </Box>
+
+                <SocialIcons />
               </Box>
 
             </Box>
@@ -77,14 +85,9 @@ const FrontHero = () => {
   )
 }
 
-FrontHero.getInitialProps = async () => {
-
-}
-
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     frontHero: {
-      minHeight: '100vh',
     },
     bgPattern: {
       position: 'absolute',
@@ -94,8 +97,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     bgCircle: {
       position: 'absolute',
-      top: '-20%',
-      left: '-20%',
       zIndex: -2,
     },
     greeting: {
@@ -106,6 +107,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     title: {
       fontWeight: 700,
+      color: 'white',
 
       '& > span': {
         color: theme.palette.primary.main
@@ -113,6 +115,11 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     subtitle: {
     },
+    quote: {
+      '& > *': {
+        marginRight: '1rem'
+      }
+    }
   })
 )
 

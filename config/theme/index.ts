@@ -27,6 +27,7 @@ const theme = createMuiTheme({
       contrastText: "#fff"
     },
     text: {
+      primary: '#B2D4ED',
       secondary: '#84A6BE',
     },
     background: {
@@ -36,7 +37,7 @@ const theme = createMuiTheme({
     type: 'dark'
   },
   typography: {
-    fontSize: 16
+    fontSize: 18
   }
 })
 

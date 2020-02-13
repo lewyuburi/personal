@@ -13,7 +13,7 @@ const Header = () => {
     <header className="header">
       <AppBar
         className={classes.appBar}
-        position="fixed"
+        position="static"
         color="transparent"
         elevation={0}
       >

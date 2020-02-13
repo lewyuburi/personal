@@ -3,6 +3,8 @@ import App from 'next/app'
 import Head from 'next/head'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
+import Router from "next/router"
+import withAnalytics from "next-analytics"
 
 import theme from './../config/theme'
 
@@ -29,7 +31,7 @@ class MyApp extends App {
           <CssBaseline />
           <style jsx global>{`
             body {
-              overflow: hidden;
+              overflow-x: hidden;
             }
             `}</style>
           <Component {...pageProps} />
@@ -39,4 +41,6 @@ class MyApp extends App {
   }
 }
 
-export default MyApp
+export default withAnalytics(Router, {
+  ga: "UA-158358061-1"
+})(MyApp)
