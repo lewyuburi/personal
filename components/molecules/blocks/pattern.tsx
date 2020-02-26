@@ -25,12 +25,6 @@ const PatternBlock = () => {
     clsx(classes.patternBlock, classes.colorPrimary, classes.borderTopLeft),
     clsx(classes.patternBlock, classes.colorSecondary, classes.borderTopLeft),
     clsx(classes.patternBlock, classes.colorSecondaryLight, classes.borderTopLeft),
-    clsx(classes.patternBlock, classes.colorPrimary, classes.borderBottomRight),
-    clsx(classes.patternBlock, classes.colorSecondary, classes.borderBottomRight),
-    clsx(classes.patternBlock, classes.colorSecondaryLight, classes.borderBottomRight),
-    clsx(classes.patternBlock, classes.colorPrimary, classes.borderBottomLeft),
-    clsx(classes.patternBlock, classes.colorSecondary, classes.borderBottomLeft),
-    clsx(classes.patternBlock, classes.colorSecondaryLight, classes.borderBottomLeft),
   ]
 
   const randomStyle = styles[Math.floor(Math.random() * styles.length)]
@@ -69,16 +63,12 @@ const useStyles = makeStyles((theme: Theme) =>
       borderBottomLeftRadius: '64px',
     },
     borderTopRight: {
-      borderTopRightRadius: '128px'
+      borderTopRightRadius: '128px',
+      borderBottomLeftRadius: '128px'
     },
     borderTopLeft: {
-      borderTopLeftRadius: '128px'
-    },
-    borderBottomRight: {
+      borderTopLeftRadius: '128px',
       borderBottomRightRadius: '128px'
-    },
-    borderBottomLeft: {
-      borderBottomLeftRadius: '128px'
     },
     colorPrimary: {
       backgroundColor: theme.palette.primary.dark
