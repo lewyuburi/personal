@@ -2,7 +2,7 @@ import { Typography, Grid, Container, Box } from '@material-ui/core'
 
 const FrontAbout = () => {
   return (
-    <Box py={8} mt={16} component="section">
+    <Box py={{ xs: 2, md: 8 }} mt={{ xs: 8, md: 16 }} component="section">
       <Container>
         <Grid container>
           <Grid xs={12} md={2} item>

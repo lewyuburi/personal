@@ -53,7 +53,7 @@ const FrontHero = () => {
               <Typography className={classes.title} variant="h4" gutterBottom>
                 Soy <span>Lewis Yuburi</span>,
                 <br />
-                Full-stack web & mobile developer.
+                Web & mobile developer.
               </Typography>
 
               <Typography color="textSecondary" className={classes.subtitle} variant="body2" gutterBottom>
@@ -61,7 +61,7 @@ const FrontHero = () => {
                 {!githubData.loading && (`📍 ${githubData.value?.location}`)}
               </Typography>
 
-              <Box py={4}>
+              <Box py={{ xs: 2, md: 4 }}>
                 <Box className={classes.quote} display="flex" mb={2} alignItems="center">
                   <Avatar src={githubData.value?.avatar_url} />
                   <Typography variant="body2">
@@ -74,11 +74,6 @@ const FrontHero = () => {
 
             </Box>
           </Grid>
-
-          <Grid xs={12} md={6} lg={8} item>
-
-          </Grid>
-
         </Grid>
       </Container>
     </section>

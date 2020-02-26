@@ -17,7 +17,8 @@
     "paths": {
       "~components/*": ["components/*"],
       "~config/*": ["config/*"],
-      "~assets/*": ["assets/*"]
+      "~assets/*": ["assets/*"],
+      "~data/*": ["data/*"]
     }
   },
   "exclude": ["node_modules"],
