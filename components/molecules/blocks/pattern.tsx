@@ -28,10 +28,13 @@ const PatternBlock = () => {
   ]
 
   const randomStyle = styles[Math.floor(Math.random() * styles.length)]
+  const opacity = (Math.random() * 3)
+
+  console.log(opacity)
 
   return (
     <motion.div transition={{ duration: 0.5 }} animate={{ scale: [0, 1] }}>
-      <div className={randomStyle} />
+      <div className={randomStyle} style={{ opacity }} />
     </motion.div>
   )
 }
