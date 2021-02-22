@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-const Index = () => {
-    return (
-        <div>
-            home
-        </div>
-    );
+import Navbar from '@/components/navbar'
+
+const HomePage = () => {
+  return (
+    <React.Fragment>
+      <Navbar />
+    </React.Fragment>
+  );
 };
 
-export default Index
+export default HomePage;
