@@ -27,13 +27,13 @@ const NavbarComponent = (props: INavbarComponentProps) => {
             <div tw="flex flex-col">
               {props?.title && (
                 <a href="/" rel="home">
-                  <span tw="text-xl	font-bold">
+                  <span tw="text-lg	font-bold">
                     {props?.title}
                   </span>
                 </a>
               )}
               {props?.subtitle && (
-                <span tw="text-xs">
+                <span tw="text-sm">
                   {props?.subtitle}
                 </span>
               )}
@@ -50,16 +50,16 @@ const NavbarComponent = (props: INavbarComponentProps) => {
           </button>
         </div>
 
-        <div tw="w-full md:w-auto md:flex-grow md:flex md:items-center">
+        <div tw="w-full flex-1 md:w-auto md:flex-grow md:flex md:items-center">
           <ul tw="flex flex-col mt-4 -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:ml-auto md:mt-0 md:pt-0 md:border-0">
             <li>
-              <a tw="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Link">Link</a>
+              <a tw="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Inicio">Inicio</a>
             </li>
             <li>
-              <a tw="block px-4 py-1 md:p-2 lg:px-4 text-purple-600" href="#" title="Active Link">Active Link</a>
+              <a tw="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Sobre mi">Sobre mi</a>
             </li>
             <li>
-              <a tw="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Link">Link</a>
+              <a tw="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Contacto">Contacto</a>
             </li>
           </ul>
         </div>

@@ -1,9 +1,10 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { extractCritical } from '@emotion/server'
+import 'twin.macro'
 
 interface IMyDocumentProps {
-    ids: string[]
-    css: string
+  ids: string[]
+  css: string
 }
 
 class MyDocument extends Document<IMyDocumentProps> {
@@ -19,12 +20,14 @@ class MyDocument extends Document<IMyDocumentProps> {
     return (
       <Html lang="en">
         <Head>
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href={`https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap`} rel="stylesheet" />
           <style
             data-emotion-css={this.props.ids.join(' ')}
             dangerouslySetInnerHTML={{ __html: this.props.css }}
           />
         </Head>
-        <body>
+        <body tw="font-sans">
           <Main />
           <NextScript />
         </body>
