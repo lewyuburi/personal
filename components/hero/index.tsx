@@ -20,7 +20,7 @@ const HeroComponent = (props: IHeroComponentProps) => {
   }, [])
 
   const getCodeData: any = async () => {
-    const res = await fetch('https://raw.githubusercontent.com/lewyuburi/personal/beta/pages/index.tsx')
+    const res = await fetch('https://raw.githubusercontent.com/lewyuburi/personal/master/pages/index.tsx')
     const codeDataResponse: string = await res.text()
 
     setCodeData(codeDataResponse)
