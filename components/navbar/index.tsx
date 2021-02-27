@@ -67,13 +67,33 @@ const NavbarComponent = (props: INavbarComponentProps) => {
         <div css={[tw`w-full flex-1 md:(w-auto flex-grow flex items-center flex)`, showNav ? tw`block` : tw`hidden`]}>
           <ul tw="flex flex-col mt-4 -mx-4 pt-4 border-t md:(flex-row items-center mx-0 ml-auto mt-0 pt-0 border-0)">
             <li>
-              <a tw="font-medium block px-4 py-1 md:(p-2) lg:(px-4)" href="/" title="Inicio">Inicio</a>
+              <a tw="text-3xl block px-4 py-1 md:(p-2) lg:(px-4)" href="#" title="Sobre mi">
+                <i tw="align-middle" className="lab la-facebook" /> <span tw="text-base align-middle md:(hidden)">Facebook</span>
+              </a>
             </li>
+
             <li>
-              <a tw="font-medium block px-4 py-1 md:(p-2) lg:(px-4)" href="#" title="Sobre mi">Sobre mi</a>
+              <a tw="text-3xl block px-4 py-1 md:(p-2) lg:(px-4)" href="#" title="Contacto">
+                <i tw="align-middle" className="lab la-instagram"></i> <span tw="text-base align-middle md:(hidden)">Instagram</span>
+              </a>
             </li>
+
             <li>
-              <a tw="font-medium block px-4 py-1 md:(p-2) lg:(px-4)" href="#" title="Contacto">Contacto</a>
+              <a tw="text-3xl block px-4 py-1 md:(p-2) lg:(px-4)" href="#" title="Contacto">
+                <i tw="align-middle" className="lab la-twitter"></i> <span tw="text-base align-middle md:(hidden)">Twitter</span>
+              </a>
+            </li>
+
+            <li>
+              <a tw="text-3xl block px-4 py-1 md:(p-2) lg:(px-4)" href="#" title="Contacto">
+                <i tw="align-middle" className="lab la-linkedin-in"></i> <span tw="text-base align-middle md:(hidden)">LinkedIn</span>
+              </a>
+            </li>
+
+            <li>
+              <a tw="text-3xl block px-4 py-1 md:(p-2) lg:(px-4)" href="#" title="Contacto">
+                <i tw="align-middle" className="lab la-github"></i> <span tw="text-base align-middle md:(hidden)">Github</span>
+              </a>
             </li>
           </ul>
         </div>

@@ -20,7 +20,7 @@ const HeroComponent = (props: IHeroComponentProps) => {
   }, [])
 
   const getCodeData: any = async () => {
-    const res = await fetch('https://raw.githubusercontent.com/lewyuburi/personal/master/pages/index.tsx')
+    const res = await fetch('https://raw.githubusercontent.com/lewyuburi/personal/beta/pages/index.tsx')
     const codeDataResponse: string = await res.text()
 
     setCodeData(codeDataResponse)
@@ -31,7 +31,7 @@ const HeroComponent = (props: IHeroComponentProps) => {
   return (
     <div tw="container-xl mx-auto py-32">
       <h2 tw="text-8xl font-extrabold text-center tracking-tighter">
-        Easy <code>code</code>, easy life✌️
+        Easy code, easy life✌️
       </h2>
       <p tw="max-w-screen-sm mx-auto text-lg my-12 text-center text-gray-500">
         Soy <span tw="text-gray-900 font-medium">web {'&'} mobile developer</span> en <span tw="text-gray-900 font-medium">{props?.company}</span>,
