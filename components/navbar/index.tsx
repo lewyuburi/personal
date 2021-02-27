@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image'
 import tw from 'twin.macro'
+import { useWindowScroll } from 'react-use';
 
 interface INavbarComponentProps {
   title?: string
@@ -9,11 +10,17 @@ interface INavbarComponentProps {
 }
 
 const NavbarComponent = (props: INavbarComponentProps) => {
-
+  const scrollPos = useWindowScroll();
   const [showNav, setShowNav] = React.useState<boolean>(false)
 
   return (
-    <nav role="navigation">
+    <nav
+      css={[
+        tw`sticky top-0 z-50 bg-white transition-all`,
+        scrollPos.y > 100 && tw`box-shadow[0 1px 0 rgba(0,0,0,.05)]`
+      ]}
+      role="navigation"
+    >
       <div tw="container-xl mx-auto px-4 py-2 flex flex-col flex-wrap items-center md:(flex-nowrap flex-row)">
 
         <div tw="flex w-full md:(w-auto)">
@@ -53,20 +60,20 @@ const NavbarComponent = (props: INavbarComponentProps) => {
                 <title>Menu</title>
                 <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
               </svg>
-            </button> 
+            </button>
           </div>
         </div>
 
-        <div css={[ tw`w-full flex-1 md:(w-auto flex-grow flex items-center flex)`, showNav ? tw`block` : tw`hidden` ]}>
+        <div css={[tw`w-full flex-1 md:(w-auto flex-grow flex items-center flex)`, showNav ? tw`block` : tw`hidden`]}>
           <ul tw="flex flex-col mt-4 -mx-4 pt-4 border-t md:(flex-row items-center mx-0 ml-auto mt-0 pt-0 border-0)">
             <li>
-              <a tw="block px-4 py-1 md:(p-2) lg:(px-4)" href="#" title="Inicio">Inicio</a>
+              <a tw="font-medium block px-4 py-1 md:(p-2) lg:(px-4)" href="/" title="Inicio">Inicio</a>
             </li>
             <li>
-              <a tw="block px-4 py-1 md:(p-2) lg:(px-4)" href="#" title="Sobre mi">Sobre mi</a>
+              <a tw="font-medium block px-4 py-1 md:(p-2) lg:(px-4)" href="#" title="Sobre mi">Sobre mi</a>
             </li>
             <li>
-              <a tw="block px-4 py-1 md:(p-2) lg:(px-4)" href="#" title="Contacto">Contacto</a>
+              <a tw="font-medium block px-4 py-1 md:(p-2) lg:(px-4)" href="#" title="Contacto">Contacto</a>
             </li>
           </ul>
         </div>

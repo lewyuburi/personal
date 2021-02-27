@@ -1,7 +1,7 @@
 module.exports = {
   theme: {
     fontFamily: {
-      'sans': ['Heebo', 'sans-serif'],
+      'sans': ['Manrope', 'sans-serif'],
     },
     extend: {
       colors: {
